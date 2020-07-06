@@ -2,12 +2,17 @@
   <div class="budget-items-container">
     <div class="budget__income">
       <h2 class="budget__title budget__title--income">Доходы</h2>
-      <div class="budget-items"></div>
+      <div class="budget-items">
+        <app-budget-item [isIncome]="true"></app-budget-item>
+        <app-budget-item [isIncome]="true"></app-budget-item>
+      </div>
     </div>
 
-    <div class="budget__expenses budget__title--expenses">
-      <h2 class="budget__title">Расходы</h2>
-      <div class="budget-items"></div>
+    <div class="budget__expenses">
+      <h2 class="budget__title budget__title--expenses">Расходы</h2>
+      <div class="budget-items">
+        <app-budget-item [isIncome]="false"></app-budget-item>
+      </div>
     </div>
   </div>
 </section>
