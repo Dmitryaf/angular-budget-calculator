@@ -1,0 +1,32 @@
+
+@import '../../sass/variables.sass'
+@import '../../sass/mixins.sass'
+
+.budget
+
+  &-items-section
+    @include contentCenter
+
+  &-items-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    max-width: 600px
+    height: 100%
+
+  &__income,
+  &__expenses
+    display: flex
+    flex-direction: column
+    flex-basis: 0
+    flex-grow: 1
+
+  &__title
+    text-transform: uppercase
+
+    &--income
+      color: $green
+
+    &--expenses
+      color: $red
