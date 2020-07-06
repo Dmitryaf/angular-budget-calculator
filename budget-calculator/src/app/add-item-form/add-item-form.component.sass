@@ -1,12 +1,19 @@
-@import '../../variables.sass'
-  
+@import '../../sass/variables.sass'
+@import '../../sass/mixins.sass'
+
+.add-item
+  @include contentCenter
+
+  &-container
+    width: 600px
+    
 .form
   display: flex
   justify-content: space-between
   align-items: center
   border-bottom: 1px solid $grey
   margin: 30px 0 50px
-  padding: 10px 10px 50px 10px
+  padding: 10px 10px 30px 10px
 
   &__input
     font-size: 16px
