@@ -1,15 +1,17 @@
 <section class="add-item">
   <div class="add-item-container">
-    <form class="form">
+    <form class="form" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
       <div class="form__field">
-        <input type="number" class="form__input form__input-number" placeholder="Введите сумму">
+        <input type="number" name="amount" class="form__input form__input-number" placeholder="Введите сумму"
+          [ngModel]="item.amount" required>
       </div>
 
       <div class="form__field">
-        <input type="text" class="form__input form__input-descr" placeholder="Введите описание">
+        <input type="text" name="description" class="form__input form__input-descr" placeholder="Введите описание"
+          [ngModel]="item.description" required>
       </div>
 
-      <button class="btn" type="submit">Добавить</button>
+      <button class="btn form__btn" type="submit" [disabled]="!itemForm.valid">Добавить</button>
     </form>
   </div>
 </section>
