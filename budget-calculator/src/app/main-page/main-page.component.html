@@ -3,10 +3,13 @@
 </header>
 
 <section class="total-budget">
-  <h2 class="total-budget__count total-budget__count--green">1500</h2>
+  <h2 class="total-budget__count"
+    [ngClass]="{ 'total-budget__count--green': totalBudget > 0, 'total-budget__count--red': totalBudget < 0 }">
+    {{ totalBudget }}</h2>
 </section>
 
 
 <app-add-item-form (formSubmit)="addItem($event)"></app-add-item-form>
 
-<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)"></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)" (update)="updateItem($event)">
+</app-budget-item-list>
