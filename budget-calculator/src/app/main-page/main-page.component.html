@@ -9,4 +9,4 @@
 
 <app-add-item-form (formSubmit)="addItem($event)"></app-add-item-form>
 
-<app-budget-item-list [budgetItems]="budgetItems"></app-budget-item-list>
+<app-budget-item-list [budgetItems]="budgetItems" (delete)="deleteItem($event)"></app-budget-item-list>
