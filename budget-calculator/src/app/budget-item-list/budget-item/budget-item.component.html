@@ -1,5 +1,7 @@
 <div class="budget-item"
-  [ngClass]="{ 'budget-item--income': item.amount >= 0, 'budget-item--expenses': item.amount < 0}">
+  [ngClass]="{ 'budget-item--income': item.amount >= 0, 'budget-item--expenses': item.amount < 0}"
+  (click)="onBudgetItemClick()">
+
   <p class="budget-item__descr">
     {{ item.description }}
   </p>

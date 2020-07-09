@@ -4,7 +4,8 @@
       <h2 class="budget__title budget__title--income">Доходы</h2>
       <div class="budget-items">
         <div *ngFor="let item of budgetItems">
-          <app-budget-item *ngIf="item.amount >= 0" [item]="item" (btnDeleteClick)="onDelete(item)"></app-budget-item>
+          <app-budget-item *ngIf="item.amount >= 0" [item]="item" (btnDeleteClick)="onDelete(item)"
+            (itemClick)="onItemClicked(item)"></app-budget-item>
         </div>
       </div>
     </div>
@@ -13,7 +14,8 @@
       <h2 class="budget__title budget__title--expenses">Расходы</h2>
       <div class="budget-items">
         <div *ngFor="let item of budgetItems">
-          <app-budget-item *ngIf="item.amount < 0" [item]="item" (btnDeleteClick)="onDelete(item)"></app-budget-item>
+          <app-budget-item *ngIf="item.amount < 0" [item]="item" (btnDeleteClick)="onDelete(item)"
+            (itemClick)="onItemClicked(item)"></app-budget-item>
         </div>
       </div>
     </div>
