@@ -11,7 +11,10 @@
           [ngModel]="item.description" required>
       </div>
 
-      <button class="btn form__btn" type="submit" [disabled]="!itemForm.valid">Добавить</button>
+      <button class="btn form__btn" type="submit" [disabled]="!itemForm.valid">
+        <p *ngIf="isNewItem">Добавить</p>
+        <p *ngIf="!isNewItem">Изменить</p>
+      </button>
     </form>
   </div>
 </section>
